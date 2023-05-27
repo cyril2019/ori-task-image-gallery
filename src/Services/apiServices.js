@@ -4,8 +4,8 @@ import axios from "axios";
 import config from "../config.json";
 
 // config.json contains the api key and the flickr api url
-const { flickrApiUrl, api_key } = config;
-console.log(flickrApiUrl, api_key);
+const flickrApiUrl = config.flickrApiUrl || process.env.FLICKR_API_URL;
+const api_key = config.api_key || process.env.API_KEY;
 
 // getImageObject returns an object with the image url and title
 const getImageObject = (image) => {
