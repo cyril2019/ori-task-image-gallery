@@ -1,10 +1,11 @@
 // Desc: This file contains the api services for the application
 
 import axios from "axios";
+import config from "../config.json";
 
 // config.json contains the api key and the flickr api url
-const flickrApiUrl = process.env.FLICKR_API_URL;
-const api_key = process.env.API_KEY;
+const { flickrApiUrl, api_key } = config;
+console.log(flickrApiUrl, api_key);
 
 // getImageObject returns an object with the image url and title
 const getImageObject = (image) => {
