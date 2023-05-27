@@ -80,10 +80,8 @@ const ImageGrid = (props) => {
       if (isLoading) return;
       if (observer.current) observer.current.disconnect();
       observer.current = new IntersectionObserver((entries) => {
-        console.log(entries);
         if (entries[0].isIntersecting) {
           setCurrPage((prev) => prev + 1);
-          console.log("visible", currPage);
         }
       });
       if (node) observer.current.observe(node);

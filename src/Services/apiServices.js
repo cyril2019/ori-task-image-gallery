@@ -5,7 +5,6 @@ import config from "../config.json";
 
 // config.json contains the api key and the flickr api url
 const { flickrApiUrl, api_key } = config;
-console.log(flickrApiUrl, api_key);
 
 // getImageObject returns an object with the image url and title
 const getImageObject = (image) => {

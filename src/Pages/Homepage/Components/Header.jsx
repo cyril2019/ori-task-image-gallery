@@ -45,7 +45,6 @@ const Header = (props) => {
     setOptions(history);
     localStorage.setItem("searchTerms", JSON.stringify(history));
     setQuery(str);
-    console.log(query);
   };
 
   return (
